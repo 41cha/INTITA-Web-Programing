@@ -74,3 +74,16 @@ a:hover {
     font-size: 1rem;
     margin-top: 40px;
 }
+
+.bg-monkey {
+    position: fixed;
+    top: 30%;
+    left: 6%;
+    width: 330px;
+    height: auto;
+    z-index: 0;
+    background: url('https: //st.depositphotos.com/1036149/4936/i/950/depositphotos_49361629-stock-photo-funny-monkey.jpg') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.97;
+}
