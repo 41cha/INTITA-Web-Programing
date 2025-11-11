@@ -4,7 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дві колонки</title>
+    <title>Дві колонки з меню</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        .menu {
+            background: #ffe4b5;
+            width: 200px;
+            flex-shrink: 0;
+            padding: 20px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background: #f0ffff;
+            flex: 1;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .menu {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,9 +63,9 @@
         </nav>
         <main class="content">
             <h1>Вітаю!</h1>
-            <p>TXTTEXTTEXT<br>
-                TXTTEXTTEXTTXTTEXTTEXT<br>
-                TXTTEXTTEXTTXTTEXTTEXTTXTTEXTTEXT</p>
+            <p>Це основний текст сторінки.<br>
+                Зліва меню, а тут буде ваш контент.<br>
+                Змінюйте ширину екрана — все буде працювати!</p>
         </main>
     </div>
 </body>
