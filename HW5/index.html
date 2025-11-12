@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Мій вебсайт</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .form {
+            max-width: 250px;
+            margin: auto;
+            background: #dddddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body>
-    <h1>Homework 5</h1>
+    <div class="header">
+        <h1>Мій вебсайт</h1>
+    </div>
+
+    <main class="content">
+        <h2>Реєстраційна форма</h2>
+        <section class="form">
+            <form action="#" method="post">
+                <label>Ім’я:<br>
+                    <input type="text" name="name" required>
+                </label><br>
+
+                <label>Email:<br>
+                    <input type="email" name="email" required>
+                </label><br>
+
+                <label>Пароль:<br>
+                    <input type="password" name="password" required>
+                </label><br>
+
+                <label>Підтвердження пароля:<br>
+                    <input type="password" name="password_confirm" required>
+                </label><br>
+
+                <label>
+                    <input type="checkbox" name="terms" checked> Приймаю умови
+                </label><br>
+
+                <label>Стать:
+                    <label><input type="radio" name="gender" value="male"> Чоловіча</label>
+                    <label><input type="radio" name="gender" value="female"> Жіноча</label>
+                </label><br>
+                
+                <input type="submit" value="Зареєструватись">
+            </form>
+        </section>
+    </main>
 </body>
+</html>
