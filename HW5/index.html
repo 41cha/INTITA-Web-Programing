@@ -36,6 +36,42 @@
         h2 {
             text-align: center;
         }
+
+        @media (max-width: 600px) {
+            .form {
+                max-width: 95vw;
+                padding: 12px;
+            }
+
+            .content {
+                padding: 5px;
+            }
+
+            img {
+                display: block;
+                float: none !important;
+                margin: 15px auto 0 auto !important;
+                width: 95vw;
+                max-width: 200px;
+                height: auto;
+            }
+
+            h2,
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            label {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 
