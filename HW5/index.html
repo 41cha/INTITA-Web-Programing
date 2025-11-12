@@ -72,6 +72,20 @@
                 font-size: 1em;
             }
         }
+
+        @media (min-width: 600px) and (max-width: 1000px) {
+            .form {
+                max-width: 60vw;
+                margin: 20px auto;
+            }
+
+            img {
+                width: 200px;
+                margin: 25px auto 0 auto;
+                float: none !important;
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -79,10 +93,12 @@
     <div class="header">
         <h1>Мій вебсайт</h1>
     </div>
-    <img src="https://media.tenor.com/wYX-3ET5qrEAAAAm/cat-dancing.webp" alt="cat2"
-        style="float: left; width: 300px; height: auto; margin-top: 80px; margin-left: 200px;">
-    <img src="https://media.tenor.com/wYX-3ET5qrEAAAAm/cat-dancing.webp" alt="cat2"
-        style="float: right; width: 300px; height: auto; margin-top: 80px; margin-right: 200px;">
+    <div>
+        <img src="https://media.tenor.com/wYX-3ET5qrEAAAAm/cat-dancing.webp" alt="cat2"
+            style="float: left; width: 300px; height: auto; margin-top: 80px; margin-left: 200px;">
+        <img src="https://media.tenor.com/wYX-3ET5qrEAAAAm/cat-dancing.webp" alt="cat2"
+            style="float: right; width: 300px; height: auto; margin-top: 80px; margin-right: 200px;">
+    </div>
 
     <main class="content">
         <h2>Реєстраційна форма</h2>
