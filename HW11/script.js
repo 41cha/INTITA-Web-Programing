@@ -15,7 +15,6 @@ btn.addEventListener("click", function () {
 });
 
 
-
 document.getElementById("btn").onclick = () => {
     document.body.classList.toggle("dark");
 };
