@@ -29,9 +29,9 @@ const errorText = document.getElementById("errorText");
 const clearBtn = document.getElementById("clearBtn");
 const totalInValue = document.getElementById("totalInValue");
 const totalOutValue = document.getElementById("totalOutValue");
-const filterAllBtn = document.getElementById("filterAllBtn");
-const filterInBtn = document.getElementById("filterInBtn");
-const filterOutBtn = document.getElementById("filterOutBtn");
+const filterAllBtn = document.getElementById("filterAll");
+const filterInBtn = document.getElementById("filterIn");
+const filterOutBtn = document.getElementById("filterOut");
 
 
 // 3) ДОПОМІЖНІ ФУНКЦІЇ
