@@ -19,7 +19,7 @@ let activeFilter = "all";
 // 2) ЕЛЕМЕНТИ СТОРІНКИ (DOM)
 // TODO 1: Отримайте елементи за їх id через document.getElementById("id"). Один приклад нижче.
 const balanceValue = document.getElementById("balanceValue");
-const depositInput = document.getElementById("depositInput")
+const depositInput = document.getElementById("depositInput");
 const withdrawInput = document.getElementById("withdrawInput");
 const depositBtn = document.getElementById("depositBtn");
 const withdrawBtn = document.getElementById("withdrawBtn");
@@ -70,7 +70,6 @@ function makeId() {
 // TODO 4 — save(): зберегти account у localStorage під ключем "account".
 function save() {
     localStorage.setItem("account", JSON.stringify(account));
-    // Допишіть: localStorage.setItem...
 }
 
 // Завантажити account з localStorage
@@ -101,7 +100,6 @@ function calcTotals() {
         const amount = Number(t.amount) || 0;
         if (t.type === "deposit") totalIn += amount;
         if (t.type === "withdraw") totalOut += amount;
-
     });
     return {
         totalIn: Math.round(totalIn * 100) / 100,
@@ -114,8 +112,7 @@ function calcTotals() {
 function renderTotals() {
     const totals = calcTotals();
     if (totalInValue) totalInValue.textContent = formatMoney(totals.totalIn);
-    if (totalOutValue) totalOutValue.textContent = formatMoney(totals.totalIn);
-    // Допишіть: аналогічно для totalOutValue та totals.totalOut
+    if (totalOutValue) totalOutValue.textContent = formatMoney(totals.totalOut);
 }
 
 
@@ -124,13 +121,9 @@ function renderTotals() {
 // 1) перевірку — якщо activeFilter === "all", повернути account.transactions;
 // 2) інакше повернути результат filter (за типом t.type === activeFilter).
 function getVisibleTransactions() {
-    if (activeFilter === "all") return account.transactions
+    if (activeFilter === "all") return account.transactions;
+
     return account.transactions.filter(t => t.type === activeFilter);
-
-
-    // Допишіть умову по які мають повертатись усі транзакції: if ( ... ) return account.transactions;
-
-    return account.transactions./* тут пропущене ключове слово для фільтрації, допишіть його */(t => t.type === activeFilter);
 }
 
 // TODO 8 — updateFilterButtons(): допишіть у лапках ключові слова — classList і toggle
@@ -221,7 +214,6 @@ function render() {
         transactionsList.innerHTML = "";
         visible.forEach(t => {
             transactionsList.appendChild(createTransactionItem(t));
-            // Допишіть: transactionsList.appendChild( використайте функцію для створення елементу транзакції);
         });
     }
 
@@ -246,9 +238,7 @@ function addTransaction(type, amount) {
 
     // Оновлюємо баланс
     if (type === "deposit") account.balance += amount;
-    // Допишіть: аналогічно для withdraw
-    if (type === "withdraw") account.balance -= amount
-
+    if (type === "withdraw") account.balance -= amount;
 
     // Зберігаємо і оновлюємо інтерфейс
     save();
@@ -264,8 +254,7 @@ if (depositBtn) {
 
         const amount = readAmount(depositInput);
         if (amount === null) {
-            showError("Enter a valid amount greater than 0")
-            // Допишіть: функцію повернення помилки з текстом "Enter a valid amount greater than 0"
+            showError("Enter a valid amount greater than 0");
             return;
         }
 
@@ -280,14 +269,12 @@ if (withdrawBtn) {
         showError("");
         const amount = readAmount(withdrawInput);
         if (amount === null) {
-            showError("Enter a valid amount greater than 0")
-            // Допишіть: функцію повернення помилки з текстом "Enter a valid amount greater than 0"
+            showError("Enter a valid amount greater than 0");
             return;
         }
 
         if (amount > account.balance) {
-            showError("Not enough balance")
-            // Допишіть: функцію повернення помилки з текстом "Not enough balance"
+            showError("Not enough balance");
             return;
         }
 
